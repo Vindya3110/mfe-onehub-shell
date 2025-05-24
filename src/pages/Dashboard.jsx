@@ -6,6 +6,8 @@ const SecurityPackage = React.lazy(() => import('remote1/SecurityPackage'));
 const LabourHourHold = React.lazy(() => import('remote2/LabourHourHold'));
 const MobileService = React.lazy(() => import('remote2/MobileService'));
 
+const Card = React.lazy(() => import('remote1/Card'));
+
 
 const Dashboard = () => {
     return (
@@ -15,6 +17,12 @@ const Dashboard = () => {
                 <SecurityPackage />
                 <LabourHourHold />
                 <MobileService />
+
+                {/*Using Card from Remote App*/}
+                <Card
+                    topic="OneHUB"
+                    description="Welcome to OneHUB"
+                />
             </React.Suspense>
 
         </div>
@@ -32,4 +40,5 @@ const styles = {
 };
 
 export default Dashboard;
+
 
